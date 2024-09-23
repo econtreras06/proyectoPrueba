@@ -1,14 +1,32 @@
-<h1>Hola mundo, desde angular {{ title }}</h1>
+<h1>Hola mundo, desde angular {{title}}</h1>
 
-<h2>Bienvenido(a) {{nombre}}</h2>
-<p><b>Edad:</b>{{edad}}</p>
+<p>Bienviendo(a) {{nombre}}</p>
 
 <ul>
   <li>Nombre: {{persona.nombre}}</li>
   <li>Edad: {{persona.edad}}</li>
 </ul>
 
-<img [src]="imagen" alt="prueba">
+<input type="text" name="nombreForm" id="nombreForm" placeholder="Escribe tu nombre" [(ngModel)]="nombreForm">
+
+<p>Nombre form: {{nombreForm}}</p>
+
+<br>
+<h2>Contador: {{contador}}</h2>
+<button (click)="incrementar()">Incrementar</button>
+<button (click)="disminuir()">Disminuir</button>
+<br>
+
+
+<br>
+<button [disabled]="isDisabled">Prueba disabled</button>
 <br>
 <br>
-<button [disabled]="isDisabled">Prueba botón </button>
+<img [src]="imagen" alt="">
+
+<br>
+<br>
+<br>
+<button (click)="onClick()">Prueba enlace</button>
+<br>
+<br>

@@ -11,14 +11,32 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = "proyectoPrueba";
-
   nombre: string = "Elen";
-  edad: number = 27;
+
   persona = {
-    nombre: 'Juanito',
+    nombre: "Juanito",
     edad: 15
   }
+
   imagen = './../assets/imagenPrueba.png'
 
   isDisabled: boolean = false;
+
+  nombreForm: string = "Natalia"
+
+  contador: number = 0
+
+  onClick() {
+    alert('Hola, desde la vista')
+  }
+
+  incrementar() {
+    this.contador++;
+  }
+
+  disminuir() {
+    this.contador--;
+  }
+
+
 }
